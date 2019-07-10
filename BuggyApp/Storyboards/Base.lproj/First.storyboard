@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="BuggyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IGm-in-Zsz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="94" id="vpe-KV-TSJ" customClass="CurrencyCell" customModule="BuggyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vpe-KV-TSJ" id="I5Q-aP-qlo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09X-JU-3WY">
+                                                    <rect key="frame" x="16" y="8" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="AAJ-cu-LmZ"/>
+                                                        <constraint firstAttribute="height" constant="64" id="Tjd-iL-MOJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXY-UG-uG4">
+                                                    <rect key="frame" x="88" y="15" width="47.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBq-Un-DXv">
+                                                    <rect key="frame" x="88" y="40.5" width="58" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hBq-Un-DXv" secondAttribute="bottom" constant="4" id="Ik2-bc-Xbs"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="09X-JU-3WY" secondAttribute="bottom" priority="750" constant="8" id="RpH-m6-ho0"/>
+                                                <constraint firstItem="09X-JU-3WY" firstAttribute="top" secondItem="I5Q-aP-qlo" secondAttribute="top" constant="8" id="XAX-Jc-fZm"/>
+                                                <constraint firstItem="hBq-Un-DXv" firstAttribute="top" secondItem="FXY-UG-uG4" secondAttribute="bottom" constant="4" id="dRM-wt-fMa"/>
+                                                <constraint firstItem="FXY-UG-uG4" firstAttribute="top" secondItem="I5Q-aP-qlo" secondAttribute="topMargin" constant="4" id="dXF-fq-i7F"/>
+                                                <constraint firstItem="09X-JU-3WY" firstAttribute="leading" secondItem="I5Q-aP-qlo" secondAttribute="leading" constant="16" id="hsN-XQ-bc9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hBq-Un-DXv" secondAttribute="trailing" constant="20" symbolic="YES" id="kpD-jX-tij"/>
+                                                <constraint firstItem="FXY-UG-uG4" firstAttribute="leading" secondItem="09X-JU-3WY" secondAttribute="trailing" constant="8" id="oPd-xs-rew"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FXY-UG-uG4" secondAttribute="trailing" constant="20" symbolic="YES" id="r4v-Iz-FS0"/>
+                                                <constraint firstItem="hBq-Un-DXv" firstAttribute="leading" secondItem="09X-JU-3WY" secondAttribute="trailing" constant="8" id="zSb-k3-AJT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="capitalLabel" destination="hBq-Un-DXv" id="NNM-mR-JRJ"/>
+                                            <outlet property="flagImageView" destination="09X-JU-3WY" id="aWG-aU-YRh"/>
+                                            <outlet property="nameLabel" destination="FXY-UG-uG4" id="kz0-oa-VaA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="zom-vu-HTl"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="NId-YQ-LBL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IGm-in-Zsz" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="2p5-6D-41X"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="IGm-in-Zsz" secondAttribute="trailing" id="lEL-bH-h4C"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="IGm-in-Zsz" secondAttribute="bottom" id="npB-0K-vbc"/>
+                            <constraint firstItem="IGm-in-Zsz" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="uUX-He-zqw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="IGm-in-Zsz" id="7PY-DR-0y4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>
