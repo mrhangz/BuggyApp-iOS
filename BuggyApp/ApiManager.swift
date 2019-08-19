@@ -38,7 +38,7 @@ class APIManager: APIManagerProtocol {
   }
   
   func getArtistInfo(artistName: String, completion: @escaping (Swift.Result<[Track], Error>) -> Void) {
-    let baseURL: String = "http://ec2-54-169-124-19.ap-southeast-1.compute.amazonaws.com:3000/songlist"
+    let baseURL: String = "http://54.251.183.191:3000/songlist"
     Alamofire.request(baseURL)
       .validate()
       .responseJSON { response in
